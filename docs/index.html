@@ -12,25 +12,6 @@
     gtag('js', new Date());
     gtag('config', 'GA_MEASUREMENT_ID');
   </script>
-  
-
-<script>
-  function closePopup() {
-    document.getElementById('thankYouPopup').style.display = 'none';
-  }
-
-  // ✅ Show popup if URL contains ?success=true
-  const params = new URLSearchParams(window.location.search);
-
-  if (params.get('success') === 'true') {
-    document.getElementById('thankYouPopup').style.display = 'block';
-
-    // ✅ Clean the URL (removes ?success=true after showing)
-    window.history.replaceState({}, document.title, window.location.pathname);
-  }
-</script>
-
-
   <style>
     body {
       margin: 0;
@@ -316,26 +297,10 @@ input, textarea {
   <input type="hidden" name="_subject" value="New STUDORIUM enquiry!">
   <input type="hidden" name="_captcha" value="false">
   <input type="hidden" name="_template" value="table">
-  <input type="hidden" name="_next" value="https://nsmithies.github.io/index.html?success=true">
+
 
   <button type="submit">Send Message</button>
 </form>
-
-
-<div id="thankYouPopup" style="
-  display:none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-  z-index: 9999;
-  text-align: center;
-  max-width: 300px;
-">
 
   <h3>✅ Thank You!</h3>
   <p>Your message has been sent.</p>
