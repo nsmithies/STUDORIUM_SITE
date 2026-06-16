@@ -12,6 +12,28 @@
     gtag('js', new Date());
     gtag('config', 'GA_MEASUREMENT_ID');
   </script>
+  
+<script>
+  const form = document.getElementById('contactForm');
+  const popup = document.getElementById('thankYouPopup');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault(); // stop page redirect
+
+    // ✅ (Optional) still send the form in background
+    fetch('https://formsubmit.co/nsmithies@hotmail.com', {
+      method: 'POST',
+      body: new FormData(form)
+    });
+
+    // ✅ Show thank you message
+    popup.style.display = 'block';
+
+    // ✅ Reset form
+    form.reset();
+  });
+</script>
+
   <style>
     body {
       margin: 0;
