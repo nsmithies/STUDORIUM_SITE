@@ -13,26 +13,7 @@
     gtag('config', 'GA_MEASUREMENT_ID');
   </script>
   
-<script>
-  const form = document.getElementById('contactForm');
-  const popup = document.getElementById('thankYouPopup');
 
-  form.addEventListener('submit', function(e) {
-    e.preventDefault(); // stop page redirect
-
-    // ✅ (Optional) still send the form in background
-    fetch('https://formsubmit.co/nsmithies@hotmail.com', {
-      method: 'POST',
-      body: new FormData(form)
-    });
-
-    // ✅ Show thank you message
-    popup.style.display = 'block';
-
-    // ✅ Reset form
-    form.reset();
-  });
-</script>
 
   <style>
     body {
@@ -319,7 +300,7 @@ input, textarea {
   <input type="hidden" name="_subject" value="New STUDORIUM enquiry!">
   <input type="hidden" name="_captcha" value="false">
   <input type="hidden" name="_template" value="table">
-  <input type="hidden" name="_next" value="https://yourusername.github.io/thank-you.html">
+  <input type="hidden" name="_next" value="https://nsmithies.github.io/thank-you.html">
 
   <button type="submit">Send Message</button>
 </form>
